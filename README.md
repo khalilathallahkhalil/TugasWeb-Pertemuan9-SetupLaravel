@@ -16,23 +16,33 @@ Proyek ini merupakan tugas praktikum pengembangan web yang berfokus pada setup d
 - Persiapan aplikasi web menggunakan Laravel.
 
 ## Struktur Folder
+
 ```text
 TugasWeb-Pertemuan9-SetupLaravel/
 ├── app/
+│   └── Http/
+│       └── Controllers/
+│           └── PageController.php
 ├── bootstrap/
 ├── config/
 ├── database/
 ├── public/
 ├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+│       ├── home.blade.php
+│       ├── about.blade.php
+│       └── contact.blade.php
 ├── routes/
+│   └── web.php
 ├── storage/
 ├── tests/
-├── vendor/
-├── .env
+├── .env.example
 ├── artisan
 ├── composer.json
-├── composer.lock
-└── README.md
+├── package.json
+└── vite.config.js
 ```
 
 ## Instalasi
