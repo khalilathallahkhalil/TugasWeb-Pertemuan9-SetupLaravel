@@ -81,6 +81,3 @@ Buka aplikasi melalui alamat berikut:
 
 `http://127.0.0.1:8000`
 
-## Repository
-- **GitHub**: https://github.com/khalilathallahkhalil/TugasWeb-Pertemuan9-SetupLaravel
--
