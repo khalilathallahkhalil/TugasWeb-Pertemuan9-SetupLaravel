@@ -1,83 +1,64 @@
 # Tugas Web Pertemuan 9 - Setup Laravel
 
-## Deskripsi
-Proyek ini merupakan tugas praktikum pengembangan web yang berfokus pada setup dan konfigurasi awal framework Laravel.
+Proyek ini merupakan tugas mata kuliah Pemrograman Web yang berfokus pada langkah awal inisialisasi, konfigurasi, dan penyiapan (*setup*) *framework* PHP **Laravel**. Proyek ini menyajikan struktur aplikasi dasar Laravel lengkap dengan konfigurasi lingkungan (*environment*), routing, controller, serta tampilan antarmuka (*view*).
 
-## Teknologi yang Digunakan
-- **Laravel**: Framework PHP untuk pengembangan aplikasi web.
-- **PHP**: Bahasa pemrograman untuk pengembangan web.
-- **Composer**: Dependency manager untuk PHP.
-- **MySQL**: Sistem manajemen basis data jika digunakan dalam proyek.
+---
 
-## Fitur
-- Setup awal proyek Laravel.
-- Penggunaan struktur dasar Laravel.
-- Konfigurasi lingkungan pengembangan.
-- Persiapan aplikasi web menggunakan Laravel.
+## 🛠️ Teknologi & Tools
 
-## Struktur Folder
+Proyek ini dibangun menggunakan teknologi dan pustaka berikut:
+
+- **[PHP](https://www.php.net/)** (v8.1 atau lebih baru)
+- **[Laravel Framework](https://laravel.com/)** (v10.x / v11.x)
+- **[Composer](https://getcomposer.org/)** - Dependency Manager untuk PHP
+- **[MySQL / MariaDB](https://www.mysql.com/)** - Database Relasional
+- **[Blade Engine](https://laravel.com/docs/master/blade)** - Template engine bawaan Laravel
+- **[Bootstrap / Tailwind CSS](https://tailwindcss.com/)** *(opsional/sesuai setup)* - Styling UI
+
+---
+
+## ✨ Fitur Utama
+
+- **Inisialisasi Project Laravel**: Struktur standar proyek Laravel yang siap dikembangkan.
+- **Konfigurasi Environment**: Pengaturan koneksi database dan environment key melalui `.env`.
+- **Routing & Controller**: Penanganan rute URL utama dan logika aplikasi sederhana.
+- **Desain Blade Template**: Tampilan antarmuka yang bersih dan responsif berbasis Blade.
+
+---
+
+## 📸 Screenshots
+
+*(Unggah gambar screenshot aplikasi Anda ke folder `public/img/` atau repositori GitHub, lalu sesuaikan path gambar di bawah ini)*
+
+| Halaman Utama / Landing Page | Halaman / Fitur Lainnya |
+| :---: | :---: |
+| ![Screenshot Home](public/img/screenshot-home.png) | ![Screenshot Detail](public/img/screenshot-detail.png) |
+
+---
+
+## 📁 Struktur Folder Utama
+
+Berikut adalah gambaran ringkas struktur folder utama pada proyek ini:
 
 ```text
 TugasWeb-Pertemuan9-SetupLaravel/
 ├── app/
-│   └── Http/
-│       └── Controllers/
-│           └── PageController.php
-├── bootstrap/
-├── config/
+│   ├── Http/
+│   │   ├── Controllers/   # Logic controller aplikasi
+│   │   └── Middleware/    # Middleware HTTP
+│   └── Models/            # Model Eloquent ORM
+├── bootstrap/             # Script inisialisasi & autoloader
+├── config/                # Berkas konfigurasi aplikasi
 ├── database/
-├── public/
+│   ├── migrations/        # Skema tabel database
+│   └── seeders/           # Data dummy awal
+├── public/                # File publik (index.php, CSS, JS, Gambar)
 ├── resources/
-│   ├── css/
-│   ├── js/
-│   └── views/
-│       ├── home.blade.php
-│       ├── about.blade.php
-│       └── contact.blade.php
+│   ├── views/             # File template Blade (.blade.php)
+│   ├── css/               # Asset CSS
+│   └── js/                # Asset JavaScript
 ├── routes/
-│   └── web.php
-├── storage/
-├── tests/
-├── .env.example
-├── artisan
-├── composer.json
-├── package.json
-└── vite.config.js
-```
-
-## Instalasi
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/khalilathallahkhalil/TugasWeb-Pertemuan9-SetupLaravel.git
-```
-
-### 2. Masuk ke Folder Proyek
-```bash
-cd TugasWeb-Pertemuan9-SetupLaravel
-```
-
-### 3. Instal Dependensi
-```bash
-composer install
-```
-
-### 4. Konfigurasi Environment
-```bash
-cp .env.example .env
-```
-
-### 5. Generate Application Key
-```bash
-php artisan key:generate
-```
-
-### 6. Jalankan Server
-```bash
-php artisan serve
-```
-
-Buka aplikasi melalui alamat berikut:
-
-`http://127.0.0.1:8000`
-
+│   └── web.php            # Definisi rute web utama
+├── .env.example           # Template variabel lingkungan
+├── composer.json          # Dependensi PHP & package Laravel
+└── README.md              # Dokumentasi proyek
