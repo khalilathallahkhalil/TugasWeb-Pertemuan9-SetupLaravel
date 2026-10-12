@@ -1,58 +1,114 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Tugas Web Pertemuan 9 — Setup Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+1. Deskripsi Proyek
 
-## About Laravel
+Proyek ini merupakan aplikasi web sederhana yang dibuat menggunakan framework Laravel. Aplikasi ini bertujuan untuk mempelajari konsep dasar routing, controller, Blade Template, serta penggunaan Tailwind CSS dalam pengembangan antarmuka web.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+2. Teknologi yang Digunakan
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Laravel 13 — Framework pengembangan aplikasi web.
+- PHP — Bahasa pemrograman backend.
+- Blade Template — Mengelola tampilan halaman web.
+- Tailwind CSS — Mengatur desain dan tata letak halaman.
+- Vite — Mengelola aset frontend.
+- Composer — Mengelola dependensi PHP.
+- Node.js dan npm — Mengelola dependensi frontend.
+- SQLite — Sistem basis data.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+3. Fitur Aplikasi
 
-## Learning Laravel
+- Home: Menampilkan halaman utama dan daftar keahlian.
+- About: Menampilkan informasi nama dan kelas.
+- Contact: Menampilkan informasi email dan nomor telepon.
+- Navigasi: Memungkinkan pengguna berpindah antarhalaman.
+- Route Parameter: Menampilkan pesan sapaan berdasarkan nama yang dimasukkan melalui URL.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. Struktur Folder
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+TugasWeb-Pertemuan9-SetupLaravel/
+├── app/
+│   └── Http/
+│       └── Controllers/
+│           └── PageController.php
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+│   ├── css/
+│   ├── js/
+│   └── views/
+│       ├── home.blade.php
+│       ├── about.blade.php
+│       └── contact.blade.php
+├── routes/
+│   └── web.php
+├── storage/
+├── tests/
+├── .env.example
+├── artisan
+├── composer.json
+├── package.json
+└── vite.config.js
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+5. Cara Instalasi
 
-## Agentic Development
+Prasyarat
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Pastikan PHP, Composer, Node.js, npm, dan Git sudah terpasang.
 
-```bash
-composer require laravel/boost --dev
+Langkah 1: Clone Repository
 
-php artisan boost:install
-```
+git clone https://github.com/khalilathallahkhalil/TugasWeb-Pertemuan9-SetupLaravel.git
+cd TugasWeb-Pertemuan9-SetupLaravel
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Langkah 2: Instal Dependensi
 
-## Contributing
+composer install
+npm install
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Langkah 3: Konfigurasi Environment
 
-## Code of Conduct
+Salin ".env.example" menjadi ".env".
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Windows CMD:
 
-## Security Vulnerabilities
+copy .env.example .env
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Linux/macOS:
 
-## License
+cp .env.example .env
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Buat application key:
+
+php artisan key:generate
+
+Langkah 4: Konfigurasi Database
+
+Jika menggunakan SQLite, buat file database apabila belum tersedia, lalu jalankan:
+
+php artisan migrate
+
+Langkah 5: Build Aset Frontend
+
+npm run build
+
+Langkah 6: Jalankan Aplikasi
+
+php artisan serve
+
+Buka browser dan akses:
+
+"http://127.0.0.1:8000"
+
+6. Daftar Route
+
+URL| Fungsi
+"/"| Halaman Home
+"/about"| Halaman About
+"/contact"| Halaman Contact
+"/hello/{nama}"| Pesan sapaan berdasarkan nama
+
+Repository
+
+https://github.com/khalilathallahkhalil/TugasWeb-Pertemuan9-SetupLaravel
