@@ -26,16 +26,6 @@ Proyek ini dibangun menggunakan teknologi dan pustaka berikut:
 
 ---
 
-## 📸 Screenshots
-
-*(Unggah gambar screenshot aplikasi Anda ke folder `public/img/` atau repositori GitHub, lalu sesuaikan path gambar di bawah ini)*
-
-| Halaman Utama / Landing Page | Halaman / Fitur Lainnya |
-| :---: | :---: |
-| ![Screenshot Home](public/img/screenshot-home.png) | ![Screenshot Detail](public/img/screenshot-detail.png) |
-
----
-
 ## 📁 Struktur Folder Utama
 
 Berikut adalah gambaran ringkas struktur folder utama pada proyek ini:
